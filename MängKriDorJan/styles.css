@@ -1,0 +1,74 @@
+/* Üldine stiil */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#cart {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: 250px; /* Pildi ja kasti laius */
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    max-width: 200px; /* Pildi suurus väiksemaks */
+}
+
+h2 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
+}
+
+label, select, button {
+    display: block;
+    width: 100%; /* Nupp ja valikuväli sama laiad kui kast */
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Ostukorv */
+#cart-items {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
