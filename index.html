@@ -5,18 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A R L O</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .navbar .dropdown .dropbtn {
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+        }
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: #555;
+        }
+        .navbar .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .navbar .dropdown-content a {
+            float: none;
+            color: black;
+            text-align: left;
+            padding: 12px 16px;
+            text-decoration: none;
+        }
+        .navbar .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .navbar .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .search-bar {
+            float: right;
+            padding: 8px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>- A R L O -</h1>
-        <div id="cart">
-            <p>Ostukorv (<span id="cart-count">0</span>)</p>
+    <main>
+        <div class="products">
+            <h2>Tooted</h2>
+            <div class="product-dropdown">
+                <button class="dropbtn">Tooted</button>
+                <div class="dropdown-content">
+                    <a href="jalanoud.html">Jalanõud</a>
+                    <a href="riided.html">Riided</a>
+                </div>
+            </div>
         </div>
-    </header>
+    </main>
+    
     <h1>- Jalanõud -</h1>
 
     <main>
-
         <div class="product">
             <h2>Campus 00s</h2>
             <img src="images/3.png" alt="Campus 00s kingad" class="product-image">
@@ -37,7 +98,6 @@
             <button onclick="addToCart('Campus 00s', 129, 'size1')">Lisa korvi</button>
         </div>
 
-
         <div class="product">
             <h2>Air Force 1 07</h2>
             <img src="images/4.png" alt="Air Force 1 ´07 kingad" class="product-image">
@@ -57,7 +117,6 @@
             <button onclick="addToCart('Air Force 1 ´07', 134, 'size2')">Lisa korvi</button>
         </div>
 
-  
         <div class="product">
             <h2>One Star Pro Ox</h2>
             <img src="images/1.png" alt="One Star Pro Ox kingad" class="product-image">
@@ -77,11 +136,8 @@
             <button onclick="addToCart('One Star Pro Ox', 89, 'size3')">Lisa korvi</button>
         </div>
 
-
-
         <div class="product">
-            <h2>New Balance U9060
-            </h2>
+            <h2>New Balance U9060</h2>
             <img src="images/5.png" alt="Samba OG kingad" class="product-image">
             <p>Hind: 199€</p>
             <label for="size4">Vali suurus:</label>
@@ -96,15 +152,15 @@
                 <option value="45">45</option>
                 <option value="46">46</option>
             </select>
-            <button onclick="addToCart('Samba OG', 120, 'size4')">Lisa korvi</button>
+            <button onclick="addToCart('New Balance U9060', 199, 'size4')">Lisa korvi</button>
         </div>
 
         <div class="product">
             <h2>Nike Dunk Low Gs</h2>
-            <img src="images/6.png" alt="Samba OG kingad" class="product-image">
+            <img src="images/6.png" alt="Nike Dunk Low Gs kingad" class="product-image">
             <p>Hind: 99€</p>
-            <label for="size4">Vali suurus:</label>
-            <select id="size4">
+            <label for="size5">Vali suurus:</label>
+            <select id="size5">
                 <option value="35">35</option>
                 <option value="36">36</option>
                 <option value="38">38</option>
@@ -115,36 +171,34 @@
                 <option value="44">44</option>
                 <option value="46">46</option>
             </select>
-            <button onclick="addToCart('Samba OG', 120, 'size4')">Lisa korvi</button>
+            <button onclick="addToCart('Nike Dunk Low Gs', 99, 'size5')">Lisa korvi</button>
         </div>
 
         <div class="product">
-            <h2> Air Jordan 4 Retro</h2>
-            <img src="images/7.png" alt="Samba OG kingad" class="product-image">
+            <h2>Air Jordan 4 Retro</h2>
+            <img src="images/7.png" alt="Air Jordan 4 Retro kingad" class="product-image">
             <p>Hind: 189€</p>
-            <label for="size4">Vali suurus:</label>
-            <select id="size4">
+            <label for="size6">Vali suurus:</label>
+            <select id="size6">
                 <option value="35">35</option>
                 <option value="36">36</option>
                 <option value="37">37</option>
-
                 <option value="39">39</option>
                 <option value="40">40</option>
                 <option value="41">41</option>
-
                 <option value="43">43</option>
                 <option value="44">44</option>
                 <option value="45">45</option>
             </select>
-            <button onclick="addToCart('Samba OG', 120, 'size4')">Lisa korvi</button>
+            <button onclick="addToCart('Air Jordan 4 Retro', 189, 'size6')">Lisa korvi</button>
         </div>
 
         <div class="product">
             <h2>Palermo moda</h2>
-            <img src="images/8.png" alt="Samba OG kingad" class="product-image">
+            <img src="images/8.png" alt="Palermo moda kingad" class="product-image">
             <p>Hind: 104€</p>
-            <label for="size4">Vali suurus:</label>
-            <select id="size4">
+            <label for="size7">Vali suurus:</label>
+            <select id="size7">
                 <option value="35">35</option>
                 <option value="37">37</option>
                 <option value="38">38</option>
@@ -155,15 +209,15 @@
                 <option value="45">45</option>
                 <option value="46">46</option>
             </select>
-            <button onclick="addToCart('Samba OG', 120, 'size4')">Lisa korvi</button>
+            <button onclick="addToCart('Palermo moda', 104, 'size7')">Lisa korvi</button>
         </div>
 
         <div class="product">
             <h2>Samba OG</h2>
             <img src="images/2.png" alt="Samba OG kingad" class="product-image">
             <p>Hind: 120€</p>
-            <label for="size4">Vali suurus:</label>
-            <select id="size4">
+            <label for="size8">Vali suurus:</label>
+            <select id="size8">
                 <option value="35">35</option>
                 <option value="36">36</option>
                 <option value="37">37</option>
@@ -177,28 +231,19 @@
                 <option value="45">45</option>
                 <option value="46">46</option>
             </select>
-            <button onclick="addToCart('Samba OG', 120, 'size4')">Lisa korvi</button>
+            <button onclick="addToCart('Samba OG', 120, 'size8')">Lisa korvi</button>
         </div>
     </main>
 
-
-
-
-
     <h1>- Riided -</h1>
 
-
-
-
-
     <main>
-
         <div class="product">
-            <h2>MH Ess Flc Crew            </h2>
-            <img src="images/11.png" alt="Campus 00s kingad" class="product-image">
+            <h2>MH Ess Flc Crew</h2>
+            <img src="images/11.png" alt="MH Ess Flc Crew" class="product-image">
             <p>Hind: 44€</p>
-            <label for="size1">Vali suurus:</label>
-            <select id="size1">
+            <label for="size9">Vali suurus:</label>
+            <select id="size9">
                 <option value="XS">XS</option>
                 <option value="S">S</option>
                 <option value="M">M</option>
@@ -206,16 +251,15 @@
                 <option value="XL">XL</option>
                 <option value="XXL">XXL</option>
             </select>
-            <button onclick="addToCart('Campus 00s', 129, 'size1')">Lisa korvi</button>
+            <button onclick="addToCart('MH Ess Flc Crew', 44, 'size9')">Lisa korvi</button>
         </div>
-
 
         <div class="product">
             <h2>MJ Air Jdn WM Flc Hoodie</h2>
-            <img src="images/12.png" alt="Air Force 1 ´07 kingad" class="product-image">
+            <img src="images/12.png" alt="MJ Air Jdn WM Flc Hoodie" class="product-image">
             <p>Hind: 99€</p>
-            <label for="size2">Vali suurus:</label>
-            <select id="size2">
+            <label for="size10">Vali suurus:</label>
+            <select id="size10">
                 <option value="XS">XS</option>
                 <option value="S">S</option>
                 <option value="M">M</option>
@@ -223,16 +267,15 @@
                 <option value="XL">XL</option>
                 <option value="XXL">XXL</option>
             </select>
-            <button onclick="addToCart('Air Force 1 ´07', 134, 'size2')">Lisa korvi</button>
+            <button onclick="addToCart('MJ Air Jdn WM Flc Hoodie', 99, 'size10')">Lisa korvi</button>
         </div>
 
-  
         <div class="product">
-            <h2>MJ Ess Stmt flc Po            </h2>
-            <img src="images/13.png" alt="One Star Pro Ox kingad" class="product-image">
+            <h2>MJ Ess Stmt flc Po</h2>
+            <img src="images/13.png" alt="MJ Ess Stmt flc Po" class="product-image">
             <p>Hind: 79€</p>
-            <label for="size3">Vali suurus:</label>
-            <select id="size3">
+            <label for="size11">Vali suurus:</label>
+            <select id="size11">
                 <option value="XS">XS</option>
                 <option value="S">S</option>
                 <option value="M">M</option>
@@ -240,15 +283,15 @@
                 <option value="XL">XL</option>
                 <option value="XXL">XXL</option>
             </select>
-            <button onclick="addToCart('One Star Pro Ox', 89, 'size3')">Lisa korvi</button>
+            <button onclick="addToCart('MJ Ess Stmt flc Po', 79, 'size11')">Lisa korvi</button>
         </div>
 
         <div class="product">
             <h2>Nike Tech Fleece</h2>
-            <img src="images/14.png" alt="Samba OG kingad" class="product-image">
+            <img src="images/14.png" alt="Nike Tech Fleece" class="product-image">
             <p>Hind: 149€</p>
-            <label for="size4">Vali suurus:</label>
-            <select id="size4">
+            <label for="size12">Vali suurus:</label>
+            <select id="size12">
                 <option value="XS">XS</option>
                 <option value="S">S</option>
                 <option value="M">M</option>
@@ -256,10 +299,9 @@
                 <option value="XL">XL</option>
                 <option value="XXL">XXL</option>
             </select>
-            <button onclick="addToCart('Samba OG', 120, 'size4')">Lisa korvi</button>
+            <button onclick="addToCart('Nike Tech Fleece', 149, 'size12')">Lisa korvi</button>
         </div>
     </main>
-
 
     <aside id="cart-items"></aside>
 
